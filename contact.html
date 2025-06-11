@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aglio Mio! - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">AGLIO MIO!</div>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="order.html">ORDER</a></li>
+        <li><a href="contact.html" class="active">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-section">
+      <div class="contact-info-map">
+        <h1>CONTACT US</h1>
+        <div class="contact-details">
+          <p>Tel: 011 5557 7074</p>
+          <p>raihanahzzainudin@gmail.com</p>
+          <p>Mahallah Asiah, International Islamic University Malaysia, P.O. Box 10, 50728, Kuala Lumpur, MALAYSIA</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/aglioomio/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@hannahgmontana?_t=ZS-8x7tO3EkH13&_r=1"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@deanaraihana"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3687614612427!2d101.73047747473082!3d3.2582514467167734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c63424f45d%3A0xa85ec988a38cec7d!2sMahallah%20Asiah!5e0!3m2!1sen!2smy!4v1749677025483!5m2!1sen!2smy"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="feedback-form-container">
+        <h2>FEEDBACK FORM</h2>
+        <form class="feedback-form" action="https://formspree.io/f/mgvykapw" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Leave us a message here...</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">SUBMIT</button>
+        </form>
+        <div id="form-message" style="display: none; color: green;">
+          Thank you! Your feedback has been submitted.
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

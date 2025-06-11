@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aglio Mio! - Order</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .total-display {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .qr-payment {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .qr-payment img {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">AGLIO MIO!</div>
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="menu.html">MENU</a></li>
+        <li><a href="order.html" class="active">ORDER</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="order-main">
+    <section class="order-section">
+      <div class="order-items-selection">
+        <div class="order-item-card" data-price="6">
+          <img src="images\chickenaglio.jpg" />
+          <div class="item-details">
+            <h3>CHICKEN AGLIO</h3>
+            <p>RM 6</p>
+          </div>
+          <div class="quantity-control">
+            <button class="minus-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+          <input type="hidden" name="Chicken Aglio Quantity" value="0" class="hidden-input" />
+        </div>
+
+        <div class="order-item-card" data-price="7">
+          <img src="images\streak beef aglio olio.jpg">
+          <div class="item-details">
+            <h3>STREAKY BEEF AGLIO</h3>
+            <p>RM 7</p>
+          </div>
+          <div class="quantity-control">
+            <button class="minus-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+          <input type="hidden" name="Beef Aglio Quantity" value="0" class="hidden-input" />
+        </div>
+
+        <div class="order-item-card" data-price="7">
+          <img src="images\meatballaglio.jpg" />
+          <div class="item-details">
+            <h3>MEATBALL AGLIO</h3>
+            <p>RM 7</p>
+          </div>
+          <div class="quantity-control">
+            <button class="minus-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+          <input type="hidden" name="Meatball Aglio Quantity" value="0" class="hidden-input" />
+        </div>
+
+        <div class="order-item-card" data-price="8">
+          <img src="images\meatball aglio.jpeg" />
+          <div class="item-details">
+            <h3>SEAFOOD AGLIO</h3>
+            <p>RM 8</p>
+          </div>
+          <div class="quantity-control">
+            <button class="minus-btn">-</button>
+            <span class="quantity">0</span>
+            <button class="plus-btn">+</button>
+          </div>
+          <input type="hidden" name="Seafood Aglio Quantity" value="0" class="hidden-input" />
+        </div>
+      </div>
+
+      <div class="order-form-container">
+        <div class="total-display">
+          <h3>Total: RM <span id="total-price">0.00</span></h3>
+        </div>
+
+        <div class="qr-payment">
+          <h4>Scan to Pay</h4>
+          <img src="images\QR.jpg" alt="QR Code for payment" />
+          <p>Please pay the amount shown above and submit the form.</p>
+        </div>
+
+        <form action="https://formspree.io/f/mzzgredn" method="POST" class="order-form" id="orderForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your answer" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your answer" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="mahallah">Mahallah *</label>
+              <select id="mahallah" name="mahallah" required>
+                <option value="">Choose</option>
+                <option value="Mahallah Faruq">Mahallah Faruq</option>
+                <option value="Mahallah Siddiq">Mahallah Siddiq</option>
+                <option value="Mahallah Ali">Mahallah Ali</option>
+                <option value="Mahallah Bilal">Mahallah Bilal</option>
+                <option value="Mahallah Uthman">Mahallah Uthman</option>
+                <option value="Mahallah Zubair">Mahallah Zubair</option>
+                <option value="Mahallah Salahuddin">Mahallah Salahuddin</option>
+                <option value="Mahallah Ruqayyah">Mahallah Ruqayyah</option>
+                <option value="Mahallah Aminah">Mahallah Aminah</option>
+                <option value="Mahallah Asiah">Mahallah Asiah</option>
+                <option value="Mahallah Asma'">Mahallah Asma'</option>
+                <option value="Mahallah Hafsah">Mahallah Hafsah</option>
+                <option value="Mahallah Halimatus">Mahallah Halimatus</option>
+                <option value="Mahallah Maryam">Mahallah Maryam</option>
+                <option value="Mahallah Nusaibah">Mahallah Nusaibah</option>
+                <option value="Mahallah Safiyyah">Mahallah Safiyyah</option>
+                <option value="Mahallah Sumayyah">Mahallah Sumayyah</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="room">Room Number *</label>
+              <input type="text" id="room" name="room" placeholder="Your answer" required />
+            </div>
+          </div>
+
+          <!-- Hidden total price input -->
+          <input type="hidden" name="Total Price (RM)" value="0" id="total-hidden" />
+
+          <!-- Hidden quantity inputs already exist inside item cards -->
+
+          <button type="submit" class="btn btn-submit">SUBMIT</button>
+        </form>
+
+        <div id="form-message" style="display: none; color: green;">
+          Thank you! Your order has been submitted.
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
